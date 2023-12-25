@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Postavljanje karakter seta na UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Podešavanje viewport-a za pravilno prikazivanje na različitim uređajima -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Postavljanje naslova stranice -->
+    <title>Password Toggle</title>
+    <!-- Uključivanje eksternog CSS stila -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Kontejner za unos lozinke -->
+    <div class="input-box">
+        <!-- Input polje tipa password -->
+        <input type="password" placeholder="password" id="password">
+        <!-- Ikona oka za prikazivanje/skrivanje lozinke -->
+        <img src="eye-icons/eye-close.png" id="eyeicon">
+    </div>
+
+    <script>
+        // JavaScript kod za obradu klika na ikoni oka
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+
+        eyeicon.onclick = function(){
+            // Provjera trenutnog tipa polja za unos lozinke
+            if(password.type == "password"){
+                // Ako je trenutni tip password, promijeni ga u text i promijeni ikonu
+                password.type = "text";
+                eyeicon.src = "eye-icons/eye-open.png"
+            }
+            else{
+                // Ako je trenutni tip text, promijeni ga nazad u password i promijeni ikonu
+                password.type = "password";
+                eyeicon.src = "eye-icons/eye-close.png"
+            }
+        }
+    </script>
+</body>
+</html>

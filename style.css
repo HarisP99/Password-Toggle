@@ -1,0 +1,40 @@
+/* Resetovanje margina, paddinga i definisanje fonta za sve elemente */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Postavljanje pozadinske boje za cijelu stranicu */
+body{
+    background: #250057;
+}
+
+/* Stilizacija kontejnera za unos lozinke */
+.input-box{
+    background: #fff;
+    width: 90%; /* Širina kontejnera */
+    max-width: 500px; /* Maksimalna širina kontejnera */
+    border-radius: 5px;
+    padding: 10px 20px; /* Rastojanje unutar kontejnera */
+    margin: 300px auto; /* Margine - automatsko centriranje po horizontali i vertikali */
+    display: flex;
+    align-items: center; /* Poravnanje elemenata unutar kontejnera po vertikali */
+}
+
+/* Stilizacija input polja unutar kontejnera */
+.input-box input{
+    width: 100%; /* Širina input polja */
+    padding: 10px 0; /* Rastojanje unutar input polja */
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+    color: #555;
+}
+
+/* Stilizacija ikone oka */
+.input-box img{
+    width: 35px; /* Širina ikone */
+    cursor: pointer; /* Promjena kursora kada se pređe preko ikone */
+}
